@@ -28,8 +28,8 @@
 ## Quick Start
 
     $ capturejs --uri http://tiqav.com/ \
-    >           --selector 'header .wrapper' \
-    >           --output tiqav_header.png
+                --selector 'header .wrapper' \
+                --output tiqav_header.png
 
 ![tiqav_header.png](http://farm9.staticflickr.com/8166/7386134234_50d633e965.jpg)
 
