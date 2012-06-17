@@ -1,0 +1,58 @@
+[
+    {
+        "short": "T",
+        "long": "timeout",
+        "description": "HTTP Timeout (ms)",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "c",
+        "long": "cookies-file",
+        "description": "Cookies File",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "V",
+        "long": "viewportsize",
+        "description": "ViewPortSize {width}x{height}",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "J",
+        "long": "javascript-file",
+        "description": "Inject external script code on Web page",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "A",
+        "long": "user-agent",
+        "description": "UserAgent",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "s",
+        "long": "selector",
+        "description": "CSS Selector",
+        "value": true,
+        "required": false
+    },
+    {
+        "short": "o",
+        "long": "output",
+        "description": "Output Image File",
+        "value": true,
+        "required": true
+    },
+    {
+        "short": "u",
+        "long": "uri",
+        "description": "URI",
+        "value": true,
+        "required": true
+    }
+]

@@ -1,0 +1,21 @@
+{
+  "author": "Kazuki Suda <kazuki.suda@gmail.com>",
+  "name": "capturejs",
+  "version": "0.0.1",
+  "repository": {
+    "url": "git://github.com/superbrothers/capturejs.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "phantom": "*",
+    "opts": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "bin": {"capturejs": "./capture.js"},
+  "engines": {
+    "node": "*"
+  }
+}
