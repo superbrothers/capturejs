@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 /*jshint node: true, browser: true, indent: 2, laxcomma: true */
-/*vim: set fenc=utf-8 ts=2 sts=2 sw=2 : */
+/* vim: set fenc=utf-8 ts=2 sts=2 sw=2 : */
 "use strict";
 
 var opts = require("opts")
