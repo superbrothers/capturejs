@@ -27,7 +27,6 @@ phantom.create.apply(phantom, (function () {
       }
       // UserAgent
       if (opts.get("user-agent")) {
-        console.log(opts.get("user-agent"));
         page.set("settings.userAgent", opts.get("user-agent"));
       }
       // HTTP Timeout
