@@ -1,7 +1,7 @@
 NAME=`node -pe 'require("./package.json").name'`
 VERSION=`node -pe 'require("./package.json").version'`
 
-jshint: capture.js
+jshint: capture.js lib/capturejs.js
 		jshint $^
 clean:
 		rm -rf node_modules

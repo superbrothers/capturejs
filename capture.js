@@ -10,9 +10,9 @@ var opts      = require("opts")
 
 opts.parse(opts_conf);
 
-var option = {}
-opts_conf.forEach(function(o){
-  if(opts.get(o.long)) {
+var option = {};
+opts_conf.forEach(function (o) {
+  if (opts.get(o.long)) {
     option[o.long] = opts.get(o.long);
   }
 });
