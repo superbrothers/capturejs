@@ -5,6 +5,7 @@
   "repository": {
     "url": "git://github.com/superbrothers/capturejs.git"
   },
+  "main": "lib/capturejs.js",
   "scripts": {
     "test": "make test"
   },
@@ -14,7 +15,9 @@
   },
   "devDependencies": {},
   "optionalDependencies": {},
-  "bin": {"capturejs": "./capture.js"},
+  "bin": {
+    "capturejs": "./capture.js"
+  },
   "engines": {
     "node": "*"
   }
