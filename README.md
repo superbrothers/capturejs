@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/superbrothers/capturejs.png)](http://travis-ci.org/superbrothers/capturejs)
 # Capturejs
 
 ## Installation
