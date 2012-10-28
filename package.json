@@ -10,7 +10,9 @@
     "test": "make test"
   },
   "dependencies": {
-    "phantom": "*",
+    "phantom": "0.3.4",
+    "express": "2.X.X",
+    "dnode": "0.9.12",
     "opts": "*"
   },
   "devDependencies": {},
