@@ -1,7 +1,7 @@
 {
   "author": "Kazuki Suda <kazuki.suda@gmail.com>",
   "name": "capturejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "url": "git://github.com/superbrothers/capturejs.git"
   },
