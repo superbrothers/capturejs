@@ -10,7 +10,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "phantom": "0.3.4",
+    "phantom": "git://github.com/sebv/phantomjs-node.git",
     "express": "2.X.X",
     "dnode": "0.9.12",
     "opts": "*"
