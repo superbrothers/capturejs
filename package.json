@@ -3,6 +3,7 @@
   "name": "capturejs",
   "version": "0.0.3",
   "repository": {
+    "type": "git",
     "url": "git://github.com/superbrothers/capturejs.git"
   },
   "main": "lib/capturejs.js",
