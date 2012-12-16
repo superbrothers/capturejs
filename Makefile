@@ -7,5 +7,5 @@ clean:
 		rm -rf node_modules
 		rm -f *.png *.jpg *.gif *.tgz
 tar: clean
-		tar czf $(NAME)-$(VERSION).tgz --exclude=".git" .
+		tar czf $(NAME)-$(VERSION).tgz --exclude=".git" *
 .PHONY: jshint clean tar
