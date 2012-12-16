@@ -75,5 +75,21 @@ module.exports = {
                 });
             }, 100);
         });
+    },
+    'use external script': function (test) {
+        var expected = expectedPath('external_script.png'),
+            actual = actualPath(Date.now() + '.png');
+        capturejs.capture({
+            'uri': ROOT_URI,
+            'output': actual,
+            'javascript-file': path.join(__dirname, 'external_script')
+        }, function () {
+            setTimeout(function () {
+                async.map([expected, actual], md5sum, function (err, results) {
+                    test.equal(results[0], results[1], expected + ' eq ' + actual);
+                    test.done();
+                });
+            }, 100);
+        });
     }
 };
