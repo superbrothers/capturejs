@@ -17,7 +17,9 @@
     "opts": "*"
   },
   "devDependencies": {
-    "jslint": "*"
+    "jslint": "*",
+    "nodeunit": "*",
+    "async": "*"
   },
   "optionalDependencies": {},
   "bin": {
