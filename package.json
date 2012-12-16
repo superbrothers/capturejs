@@ -16,7 +16,9 @@
     "dnode": "0.9.12",
     "opts": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jslint": "*"
+  },
   "optionalDependencies": {},
   "bin": {
     "capturejs": "./capture.js"

@@ -1,8 +1,8 @@
 NAME=`node -pe 'require("./package.json").name'`
 VERSION=`node -pe 'require("./package.json").version'`
 
-jshint: capture.js lib/capturejs.js
-		jshint $^
+jslint:
+		@find . -type d \( -name node_modules -o -name .git \) -prune -o \( -name "*.js" -o -name "*.json" \) -print0 | xargs -0 ./node_modules/jslint/bin/jslint.js
 clean:
 		rm -rf node_modules
 		rm -f *.png *.jpg *.gif *.tgz
