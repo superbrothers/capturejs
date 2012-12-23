@@ -1,0 +1,7 @@
+test
+.git
+*.png
+*.jpg
+*.gif
+node_modules
+*.tgz
