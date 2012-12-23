@@ -8,4 +8,4 @@ clean:
 test:
 		rm -f test/actual/*.png
 		./node_modules/nodeunit/bin/nodeunit test
-.PHONY: jshint clean
+.PHONY: jshint clean test
