@@ -66,7 +66,7 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'selector': function (test) {
@@ -82,7 +82,7 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'external script': function (test) {
@@ -98,7 +98,7 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'user-agent': function (test) {
@@ -151,7 +151,7 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     }
 };
