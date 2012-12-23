@@ -40,8 +40,7 @@ module.exports = {
                 fs.readFile(path.join(__dirname, 'test.html'), 'utf8', function (err, data) {
                     res.writeHead('200', {
                         'Content-Type': 'text/html',
-                        'Set-Cookie': 'cookie=test; path=/;'
-
+                        'Set-Cookie': 'cookie=test'
                     });
                     res.write(data);
                     res.end();
@@ -114,15 +113,16 @@ module.exports = {
     },
     'cookies-file': function (test) {
         var cookiesFile = path.join(__dirname, 'cookies-file.txt');
-        fs.unlinkSync(cookiesFile);
-        capturejs.capture({
-            'uri': ROOT_URI,
-            'output': actualPath(Date.now() + '.png'),
-            'cookies-file': cookiesFile
-        }, function () {
-            fs.exists(cookiesFile, function (exists) {
-                test.ok(exists);
-                test.done();
+        fs.unlink(cookiesFile, function (err) {
+            capturejs.capture({
+                'uri': ROOT_URI,
+                'output': actualPath(Date.now() + '.png'),
+                'cookies-file': cookiesFile
+            }, function () {
+                fs.exists(cookiesFile, function (exists) {
+                    test.ok(exists);
+                    test.done();
+                });
             });
         });
     },
