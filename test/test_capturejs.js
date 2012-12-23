@@ -35,7 +35,8 @@ module.exports = {
     'setUp': function (callback) {
         server = http.createServer(function (req, res) {
             request = req;
-            var u = url.parse(req.url, true);
+            var u = url.parse(req.url, true),
+                delay = u.query.responsetime || 0;
             setTimeout(function () {
                 fs.readFile(path.join(__dirname, 'test.html'), 'utf8', function (err, data) {
                     res.writeHead('200', {
@@ -45,7 +46,7 @@ module.exports = {
                     res.write(data);
                     res.end();
                 });
-            }, (u.query.responsetime ? u.query.responsetime : 0));
+            }, delay);
         }).listen(PORT);
         callback();
     },
@@ -54,8 +55,8 @@ module.exports = {
         callback();
     },
     'basic': function (test) {
-        var expected = expectedPath('basic.png'),
-            actual = actualPath(Date.now() + '.png');
+        var expected = expectedPath('basic.gif'),
+            actual = actualPath(Date.now() + '.gif');
         capturejs.capture({
             'uri': ROOT_URI,
             'output': actual
@@ -65,28 +66,28 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'selector': function (test) {
-        var expected = expectedPath('selector.png'),
-            actual = actualPath(Date.now() + '.png');
+        var expected = expectedPath('selector.gif'),
+            actual = actualPath(Date.now() + '.gif');
         capturejs.capture({
             'uri': ROOT_URI,
             'output': actual,
-            'selector': '#wrapper1'
+            'selector': '#test'
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'external script': function (test) {
-        var expected = expectedPath('external_script.png'),
-            actual = actualPath(Date.now() + '.png');
+        var expected = expectedPath('external_script.gif'),
+            actual = actualPath(Date.now() + '.gif');
         capturejs.capture({
             'uri': ROOT_URI,
             'output': actual,
@@ -97,14 +98,14 @@ module.exports = {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     },
     'user-agent': function (test) {
         var useragent = 'This is user-agent test';
         capturejs.capture({
             'uri': ROOT_URI,
-            'output': actualPath(Date.now() + '.png'),
+            'output': actualPath(Date.now() + '.gif'),
             'user-agent': useragent
         }, function () {
             test.equal(useragent, request.headers['user-agent']);
@@ -116,11 +117,12 @@ module.exports = {
         fs.unlink(cookiesFile, function (err) {
             capturejs.capture({
                 'uri': ROOT_URI,
-                'output': actualPath(Date.now() + '.png'),
+                'output': actualPath(Date.now() + '.gif'),
                 'cookies-file': cookiesFile
             }, function () {
-                fs.exists(cookiesFile, function (exists) {
-                    test.ok(exists);
+                // fs.exists is undefined on node v0.4, v0.6
+                fs.stat(cookiesFile, function (err, stats) {
+                    test.ok(!err);
                     test.done();
                 });
             });
@@ -129,7 +131,7 @@ module.exports = {
     'timeout': function (test) {
         capturejs.capture({
             'uri': ROOT_URI + '/?responsetime=2000',
-            'output': actualPath(Date.now() + '.png'),
+            'output': actualPath(Date.now() + '.gif'),
             'timeout': 500
         }, function (err) {
             test.ok(!!err);
@@ -137,20 +139,19 @@ module.exports = {
         });
     },
     'viewportsize': function (test) {
-        var expected = expectedPath('viewportsize.png'),
-            actual = actualPath(Date.now() + '.png');
+        var expected = expectedPath('viewportsize.gif'),
+            actual = actualPath(Date.now() + '.gif');
         capturejs.capture({
             'uri': ROOT_URI,
             'output': actual,
-            'javascript-file': path.join(__dirname, 'external_script'),
-            'viewportsize': '1000x400'
+            'viewportsize': '20x20'
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
-            }, 100);
+            }, 200);
         });
     }
 };
