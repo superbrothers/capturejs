@@ -4,3 +4,4 @@ node_modules
 *.gif
 *.jpg
 *.tgz
+test/cookies-file.txt
