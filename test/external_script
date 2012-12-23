@@ -1,2 +1,1 @@
-document.getElementById('wrapper1').style.backgroundColor = 'yellow';
-document.getElementById('wrapper1').style.width = '100%';
+document.getElementById('test').setAttribute('style', 'background-color: blue;');
