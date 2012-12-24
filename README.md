@@ -1,5 +1,7 @@
 # Capturejs
 
+[![Build Status](https://travis-ci.org/superbrothers/capturejs.png?branch=master)](https://travis-ci.org/superbrothers/capturejs)
+
 ## Installation
 
     $ brew install phantomjs
