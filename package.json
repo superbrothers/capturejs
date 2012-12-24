@@ -3,6 +3,7 @@
   "name": "capturejs",
   "version": "0.0.3",
   "repository": {
+    "type": "git",
     "url": "git://github.com/superbrothers/capturejs.git"
   },
   "main": "lib/capturejs.js",
@@ -15,7 +16,11 @@
     "dnode": "0.9.12",
     "opts": "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jslint": "*",
+    "nodeunit": "*",
+    "async": "*"
+  },
   "optionalDependencies": {},
   "bin": {
     "capturejs": "./capture.js"
