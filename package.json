@@ -8,7 +8,7 @@
   },
   "main": "lib/capturejs.js",
   "scripts": {
-    "test": "make test"
+    "test": "make"
   },
   "dependencies": {
     "phantom": "git://github.com/sebv/phantomjs-node.git",
