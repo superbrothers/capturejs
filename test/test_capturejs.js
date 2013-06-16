@@ -47,12 +47,10 @@ module.exports = {
                     res.end();
                 });
             }, delay);
-        }).listen(PORT);
-        callback();
+        }).listen(PORT, callback);
     },
     'tearDown': function (callback) {
-        server.close();
-        callback();
+        server.close(callback);
     },
     'basic': function (test) {
         var expected = expectedPath('basic.gif'),
