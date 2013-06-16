@@ -29,23 +29,25 @@
 
 ## Quick Start
 
-    $ capturejs --uri http://tiqav.com/ \
-                --selector 'header .wrapper' \
-                --output tiqav_header.png
+    % capturejs --uri http://phantomjs.org/ \
+                --selector '#header' \
+                --viewportsize 1400x1400 \
+                --output 'phantomjs.org.png'
 
-![tiqav_header.png](http://farm9.staticflickr.com/8166/7386134234_50d633e965.jpg)
+![phantomjs org](https://f.cloud.github.com/assets/230185/659051/081f6cf6-d651-11e2-9b1f-a62d192135b3.png)
 
-    $ capturejs --uri http://tiqav.com/ \
-                --selector 'header .wrapper' \
-                --javascript-file tiqav_hide_logo.js \
-                --output tiqav_header.png
+    % capturejs --uri http://phantomjs.org/ \
+                --selector '#header' \
+                --viewportsize 1400x1400 \
+                --javascript-file ./hidelogo.js \
+                --output 'phantomjs.org_hide_logo.png'
 
-```js
-// tiqav_hide_logo.js
-document.querySelector("#logo").style.visibility = "hidden";
+```javascript
+// hidelogo.js
+document.querySelector('#logo').style.visibility = 'hidden';
 ```
 
-![tiqav_header_hide_logo.png](http://farm8.staticflickr.com/7073/7386144940_9e686bcaf8.jpg)
+![phantomjs org_hide_logo](https://f.cloud.github.com/assets/230185/659053/808bf312-d651-11e2-8485-b490a10f7eca.png)
 
 ## Copyright
 
