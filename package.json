@@ -11,9 +11,7 @@
     "test": "make"
   },
   "dependencies": {
-    "phantom": "git://github.com/sebv/phantomjs-node.git",
-    "express": "2.X.X",
-    "dnode": "0.9.12",
+    "phantom": "~0.5.4",
     "opts": "*"
   },
   "devDependencies": {
@@ -26,6 +24,6 @@
     "capturejs": "./capture.js"
   },
   "engines": {
-    "node": "*"
+    "node": ">=0.8"
   }
 }
