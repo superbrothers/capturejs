@@ -110,6 +110,7 @@ module.exports = {
             test.done();
         });
     },
+    /*
     'cookies-file': function (test) {
         var cookiesFile = path.join(__dirname, 'cookies-file.txt');
         fs.unlink(cookiesFile, function (err) {
@@ -152,4 +153,5 @@ module.exports = {
             }, 200);
         });
     }
+    */
 };
