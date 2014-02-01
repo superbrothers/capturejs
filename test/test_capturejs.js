@@ -39,6 +39,9 @@ module.exports = {
                 delay = u.query.responsetime || 0;
             setTimeout(function () {
                 fs.readFile(path.join(__dirname, 'test.html'), 'utf8', function (err, data) {
+                    if (err) {
+                        throw err;
+                    }
                     res.writeHead('200', {
                         'Content-Type': 'text/html',
                         'Set-Cookie': 'cookie=test'
@@ -61,6 +64,7 @@ module.exports = {
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
+                    test.ok(!err);
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
@@ -77,6 +81,7 @@ module.exports = {
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
+                    test.ok(!err);
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
@@ -93,6 +98,7 @@ module.exports = {
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
+                    test.ok(!err);
                     test.equal(results[0], results[1], expected + ' eq ' + actual);
                     test.done();
                 });
