@@ -30,21 +30,21 @@
 ## Quick Start
 
     % capturejs --uri http://phantomjs.org/ \
-                --selector '#header' \
+                --selector '.header' \
                 --viewportsize 1400x1400 \
                 --output 'phantomjs.org.png'
 
 ![phantomjs org](https://f.cloud.github.com/assets/230185/659051/081f6cf6-d651-11e2-9b1f-a62d192135b3.png)
 
     % capturejs --uri http://phantomjs.org/ \
-                --selector '#header' \
+                --selector '.header' \
                 --viewportsize 1400x1400 \
                 --javascript-file ./hidelogo.js \
                 --output 'phantomjs.org_hide_logo.png'
 
 ```javascript
 // hidelogo.js
-document.querySelector('#logo').style.visibility = 'hidden';
+document.querySelector('.header img').style.visibility = 'hidden';
 ```
 
 ![phantomjs org_hide_logo](https://f.cloud.github.com/assets/230185/659053/808bf312-d651-11e2-8485-b490a10f7eca.png)
