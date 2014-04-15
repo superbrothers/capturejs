@@ -42,6 +42,13 @@
         "required": false
     },
     {
+        "short": "I",
+        "long": "ignore-ssl-errors",
+        "description": "Ignores SSL errors (expired/self-signed certificate errors)",
+        "value": true,
+        "required": false
+    },
+    {
         "short": "o",
         "long": "output",
         "description": "Output Image File",
