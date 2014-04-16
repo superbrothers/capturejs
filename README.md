@@ -14,6 +14,8 @@
         -u, --uri <value> (required)
     Output Image File
         -o, --output <value> (required)
+    Ignores SSL errors (expired/self-signed certificate errors)
+        -I, --ignore-ssl-errors <value>
     CSS Selector
         -s, --selector <value>
     UserAgent
