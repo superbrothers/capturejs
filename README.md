@@ -1,13 +1,20 @@
-# Capturejs
+CaptureJS
+=========
+
+CaptureJS is full webpage capture command-line tool with PhantomJS.
 
 [![Build Status](https://travis-ci.org/superbrothers/capturejs.png?branch=master)](https://travis-ci.org/superbrothers/capturejs)
 
-## Installation
+Installation
+------------
 
-    $ brew install phantomjs
+First [install PhantomJS](http://phantomjs.org/download.html).
+
+
     $ npm install -g capturejs
 
-## Usage
+Usage
+-----
 
     Usage: capturejs [options]
     URI
@@ -29,14 +36,15 @@
     HTTP Timeout (ms)
         -T, --timeout <value>
 
-## Quick Start
+Quick Start
+-----------
 
     % capturejs --uri http://phantomjs.org/ \
                 --selector '.header' \
                 --viewportsize 1400x1400 \
                 --output 'phantomjs.org.png'
 
-![phantomjs org](https://f.cloud.github.com/assets/230185/659051/081f6cf6-d651-11e2-9b1f-a62d192135b3.png)
+![phantomjs org](screenshots/phantomjs_org.png)
 
     % capturejs --uri http://phantomjs.org/ \
                 --selector '.header' \
@@ -49,8 +57,9 @@
 document.querySelector('.header img').style.visibility = 'hidden';
 ```
 
-![phantomjs org_hide_logo](https://f.cloud.github.com/assets/230185/659053/808bf312-d651-11e2-8485-b490a10f7eca.png)
+![phantomjs org_hide_logo](screenshots/phantomjs_org_hide_logo.png)
 
-## Copyright
+Copyright
+---------
 
 Copyright (c) 2012 Kazuki Suda. See LICENSE.txt for further details.
