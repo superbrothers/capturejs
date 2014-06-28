@@ -49,6 +49,13 @@
         "required": false
     },
     {
+        "short": "p",
+        "long": "ssl-protocol",
+        "description": "sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)",
+        "value": "sslv3",
+        "required": false
+    },
+    {
         "short": "o",
         "long": "output",
         "description": "Output Image File",

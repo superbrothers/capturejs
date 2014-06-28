@@ -21,6 +21,8 @@ Usage
         -u, --uri <value> (required)
     Output Image File
         -o, --output <value> (required)
+    Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
+        -p, --ssl-protocol <value>
     Ignores SSL errors (expired/self-signed certificate errors)
         -I, --ignore-ssl-errors <value>
     CSS Selector
