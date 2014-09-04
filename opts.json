@@ -68,5 +68,12 @@
         "description": "URI",
         "value": true,
         "required": true
+    },
+    {
+        "short": "R",
+        "long": "renderdelay",
+        "description": "Render page after this delay (ms)",
+        "value": true,
+        "required": false
     }
 ]
