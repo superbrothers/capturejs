@@ -37,6 +37,8 @@ Usage
         -c, --cookies-file <value>
     HTTP Timeout (ms)
         -T, --timeout <value>
+    Render Delay (ms)
+        -R, --renderdelay <value>
 
 Quick Start
 -----------
