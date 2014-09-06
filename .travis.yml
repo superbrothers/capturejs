@@ -1,4 +1,11 @@
 language: node_js
-
 node_js:
-  - "0.10"
+- '0.10'
+deploy:
+  provider: npm
+  email:
+    secure: l1AEbrI3+8Dz2rdupTj8o/WVSWrBq0rENIgwyhADd/Cm4Cmq5zKvRcORZYuONcvXZsVPCZbWBwGjSNzyggc+IQeqZ9aORbRmHScEHEcEYqw9ZxB7qIiVzwpSfK/DWqfifMspSmKX6xMaqPFWr02O5BpPOu4dEC4JouYLEEEeLvY=
+  api_key:
+    secure: mTiNmygRGzuKieAt6zsp8UCaCasNdJJBCV7Ix1N+0EjLoerEbBMxKOUAbDGHTuaFW3+0L5nh+6Zd1zAWa3tNYZr8EJDqg7hwVvti3SwnONUlXz+T41beaCHZvh6eTEM92EY7U/3fGxocGXGFEGHKtZCUKrzLLl/iXsQuWNSWyjo=
+  on:
+    tags: true
