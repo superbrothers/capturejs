@@ -5,3 +5,5 @@ test
 *.gif
 node_modules
 *.tgz
+npm-debug.log
+screenshots
