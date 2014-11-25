@@ -17,6 +17,7 @@ Usage
 -----
 
     Usage: capturejs [options]
+
     URI
         -u, --uri <value> (required)
     Output Image File
@@ -39,6 +40,8 @@ Usage
         -T, --timeout <value>
     Render Delay (ms)
         -R, --renderdelay <value>
+    Zoom Factor (default is 1.0, i.e. 100% zoom)
+        -z, --zoomfactor <value>
 
 Quick Start
 -----------
