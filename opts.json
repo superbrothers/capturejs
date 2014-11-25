@@ -75,5 +75,12 @@
         "description": "Render page after this delay (ms)",
         "value": true,
         "required": false
+    },
+    {
+        "short": "z",
+        "long": "zoomfactor",
+        "description": "Zoom Factor",
+        "value": true,
+        "required": false
     }
 ]
