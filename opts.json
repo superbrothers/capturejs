@@ -79,7 +79,7 @@
     {
         "short": "z",
         "long": "zoomfactor",
-        "description": "Zoom Factor",
+        "description": "Zoom Factor (default is 1.0, i.e. 100% zoom)",
         "value": true,
         "required": false
     }
