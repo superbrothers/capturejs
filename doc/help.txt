@@ -1,0 +1,15 @@
+Usage: capturejs [options]
+
+Options:
+  -u, --uri <value>                URI (required)
+  -o, --output <value>             Output image file (required)
+  -p, --ssl-protocol <value>       Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
+  -I, --ignore-ssl-errors          Ignores SSL errors (expired/self-signed certificate errors)
+  -s, --selector <value>           CSS selector
+  -A, --user-agent <value>         UserAgent
+  -J, --javascript-file <value>    Inject external script code on Web page
+  -V, --viewportsize <value>       ViewPortSize {width}x{height}
+  -c, --cookies-file <value>       Cookies file
+  -T, --timeout <value>            HTTP Timeout (ms)
+  -R, --renderdelay <value>        Render delay (ms)
+  -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)

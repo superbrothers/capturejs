@@ -11,8 +11,8 @@
     "test": "make"
   },
   "dependencies": {
-    "phantom": "~0.5.4",
-    "opts": "*"
+    "nopt": "^3.0.1",
+    "phantom": "~0.5.4"
   },
   "devDependencies": {
     "jslint": "*",
