@@ -1,9 +1,8 @@
-CaptureJS
+CaptureJS [![Build Status][travis-image]][travis-url]
 =========
 
 CaptureJS is full webpage capture command-line tool with PhantomJS.
 
-[![Build Status](https://travis-ci.org/superbrothers/capturejs.png?branch=master)](https://travis-ci.org/superbrothers/capturejs)
 
 Installation
 ------------
@@ -64,3 +63,6 @@ Copyright
 ---------
 
 Copyright (c) 2012 Kazuki Suda. See LICENSE.txt for further details.
+
+[travis-image]: https://img.shields.io/travis/superbrothers/capturejs.svg?style=flat-square
+[travis-url]: https://travis-ci.org/superbrothers/capturejs
