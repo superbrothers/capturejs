@@ -6,7 +6,7 @@
 var url = require('url'),
     path = require('path'),
     nopt = require('nopt'),
-    cjs = require('./lib/capturejs');
+    cjs = require('../lib/capturejs');
 
 var knownOpts = {
         uri: url,

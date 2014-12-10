@@ -21,7 +21,7 @@
   },
   "optionalDependencies": {},
   "bin": {
-    "capturejs": "./capture.js"
+    "capturejs": "bin/capturejs"
   },
   "engines": {
     "node": ">=0.10"
