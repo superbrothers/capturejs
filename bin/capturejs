@@ -1,6 +1,5 @@
 #! /usr/bin/env node
 /*jslint node: true, sloppy: true, maxerr: 50, indent: 4 */
-// vim: set fenc=utf-8 ts=4 sts=4 sw=4 :
 'use strict';
 
 var url = require('url'),
@@ -75,3 +74,4 @@ if (errors.length > 0) {
 }
 
 cjs.capture(parsed);
+// vim: set ft=javascript fenc=utf-8 ts=4 sts=4 sw=4 :
