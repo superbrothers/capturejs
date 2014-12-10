@@ -16,32 +16,25 @@ First [install PhantomJS](http://phantomjs.org/download.html).
 Usage
 -----
 
-    Usage: capturejs [options]
+```
+Usage: capturejs [options]
 
-    URI
-        -u, --uri <value> (required)
-    Output Image File
-        -o, --output <value> (required)
-    Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
-        -p, --ssl-protocol <value>
-    Ignores SSL errors (expired/self-signed certificate errors)
-        -I, --ignore-ssl-errors <value>
-    CSS Selector
-        -s, --selector <value>
-    UserAgent
-        -A, --user-agent <value>
-    Inject external script code on Web page
-        -J, --javascript-file <value>
-    ViewPortSize {width}x{height}
-        -V, --viewportsize <value>
-    Cookies File
-        -c, --cookies-file <value>
-    HTTP Timeout (ms)
-        -T, --timeout <value>
-    Render Delay (ms)
-        -R, --renderdelay <value>
-    Zoom Factor (default is 1.0, i.e. 100% zoom)
-        -z, --zoomfactor <value>
+Options:
+  -u, --uri <value>                URI (required)
+  -o, --output <value>             Output image file (required)
+  -p, --ssl-protocol <value>       Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
+  -I, --ignore-ssl-errors          Ignores SSL errors (expired/self-signed certificate errors)
+  -s, --selector <value>           CSS selector
+  -A, --user-agent <value>         UserAgent
+  -J, --javascript-file <value>    Inject external script code on Web page
+  -V, --viewportsize <value>       ViewPortSize {width}x{height}
+  -c, --cookies-file <value>       Cookies file
+  -T, --timeout <value>            HTTP Timeout (ms)
+  -R, --renderdelay <value>        Render delay (ms)
+  -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
+
+  -h, --help                       Show this message and exit
+```
 
 Quick Start
 -----------

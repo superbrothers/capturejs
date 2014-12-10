@@ -5,6 +5,7 @@
 
 var url = require('url'),
     path = require('path'),
+    fs = require('fs'),
     nopt = require('nopt'),
     cjs = require('../lib/capturejs');
 
@@ -20,7 +21,8 @@ var knownOpts = {
         'cookies-file': path,
         timeout: Number,
         renderdely: Number,
-        zoomfactor: Number
+        zoomfactor: Number,
+        help: Boolean
     },
     shortHands = {
         u: '--uri',
@@ -34,7 +36,8 @@ var knownOpts = {
         c: '--cookies-file',
         T: '--timeout',
         R: '--renderdely',
-        z: '--zoomfactor'
+        z: '--zoomfactor',
+        h: '--help'
     },
     errors = [],
     parsed;
@@ -44,6 +47,12 @@ nopt.invalidHandler = function (key, val) {
 };
 
 parsed = nopt(knownOpts, shortHands, process.argv);
+
+if (parsed.help) {
+    var data = fs.readFileSync(path.join(__dirname, '../doc/help.txt'));
+    console.error(data.toString('utf-8'));
+    process.exit(0);
+}
 
 if (!parsed.uri) {
     errors.push('Missing required: --uri');

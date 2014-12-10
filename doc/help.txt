@@ -13,3 +13,5 @@ Options:
   -T, --timeout <value>            HTTP Timeout (ms)
   -R, --renderdelay <value>        Render delay (ms)
   -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
+
+  -h, --help                       Show this message and exit
