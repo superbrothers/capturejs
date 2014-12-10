@@ -33,6 +33,7 @@ Options:
   -R, --renderdelay <value>        Render delay (ms)
   -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
 
+  -v, --version                    Show version number and exit
   -h, --help                       Show this message and exit
 ```
 

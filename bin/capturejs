@@ -22,7 +22,8 @@ var knownOpts = {
         timeout: Number,
         renderdely: Number,
         zoomfactor: Number,
-        help: Boolean
+        help: Boolean,
+        version: Boolean
     },
     shortHands = {
         u: '--uri',
@@ -37,7 +38,8 @@ var knownOpts = {
         T: '--timeout',
         R: '--renderdely',
         z: '--zoomfactor',
-        h: '--help'
+        h: '--help',
+        v: '--version'
     },
     errors = [],
     parsed;
@@ -51,6 +53,11 @@ parsed = nopt(knownOpts, shortHands, process.argv);
 if (parsed.help) {
     var data = fs.readFileSync(path.join(__dirname, '../doc/help.txt'));
     console.error(data.toString('utf-8'));
+    process.exit(0);
+}
+
+if (parsed.version) {
+    console.error(require('../package.json').version);
     process.exit(0);
 }
 
