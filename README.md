@@ -1,5 +1,9 @@
-CaptureJS [![npm][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+CaptureJS
 =========
+
+[![Npm version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][gemnasium-image]][gemnasium-url]
 
 CaptureJS is full webpage capture command-line tool with PhantomJS.
 
@@ -68,3 +72,5 @@ Copyright (c) 2012 Kazuki Suda. See LICENSE.txt for further details.
 [travis-url]: https://travis-ci.org/superbrothers/capturejs
 [npm-image]: https://img.shields.io/npm/v/capturejs.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/capturejs
+[gemnasium-image]: http://img.shields.io/gemnasium/superbrothers/capturejs.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/superbrothers/capturejs
