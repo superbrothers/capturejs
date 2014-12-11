@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "nopt": "^3.0.1",
-    "phantom": "~0.5.4"
+    "phantom": "^0.7.1"
   },
   "devDependencies": {
     "async": "*",
