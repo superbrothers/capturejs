@@ -39,5 +39,10 @@
   },
   "engines": {
     "node": ">=0.10"
-  }
+  },
+  "files": [
+    "bin",
+    "lib",
+    "doc"
+  ]
 }
