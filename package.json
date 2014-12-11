@@ -10,18 +10,23 @@
   "bugs": {
     "url": "https://github.com/superbrothers/capturejs/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/superbrothers/capturejs.git"
-  },
   "license": {
     "type": "MIT",
     "url": "https://github.com/superbrothers/capturejs/blob/master/LICENSE.txt"
   },
   "author": "Kazuki Suda <kazuki.suda@gmail.com>",
+  "files": [
+    "bin",
+    "lib",
+    "doc"
+  ],
   "main": "lib/capturejs.js",
   "bin": {
     "capturejs": "bin/capturejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/superbrothers/capturejs.git"
   },
   "scripts": {
     "pretest": "rm -rf test/actual/*.gif",
@@ -39,10 +44,5 @@
   },
   "engines": {
     "node": ">=0.10"
-  },
-  "files": [
-    "bin",
-    "lib",
-    "doc"
-  ]
+  }
 }
