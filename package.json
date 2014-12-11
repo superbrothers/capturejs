@@ -24,7 +24,9 @@
     "capturejs": "bin/capturejs"
   },
   "scripts": {
-    "test": "make"
+    "pretest": "rm -rf test/actual/*.gif",
+    "test": "nodeunit test && npm run lint",
+    "lint": "eslint bin/capturejs lib/ test/"
   },
   "dependencies": {
     "nopt": "^3.0.1",
