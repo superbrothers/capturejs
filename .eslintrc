@@ -1,0 +1,8 @@
+---
+env:
+    node: true
+rules:
+    no-process-exit: 0
+globals:
+    document: true
+# vim: set ft=yaml :

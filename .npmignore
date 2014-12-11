@@ -7,3 +7,4 @@ node_modules
 *.tgz
 npm-debug.log
 screenshots
+.eslintrc

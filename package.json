@@ -15,9 +15,9 @@
     "phantom": "~0.5.4"
   },
   "devDependencies": {
-    "jslint": "*",
-    "nodeunit": "*",
-    "async": "*"
+    "async": "*",
+    "eslint": "^0.10.1",
+    "nodeunit": "*"
   },
   "optionalDependencies": {},
   "bin": {
