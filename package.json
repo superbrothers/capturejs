@@ -30,7 +30,9 @@
   },
   "scripts": {
     "pretest": "rm -rf test/actual/*.gif",
-    "test": "nodeunit test && npm run lint",
+    "test-mocha": "mocha test/lib",
+    "test-nodeunit": "nodeunit test",
+    "test": "npm run test-nodeunit && npm run test-mocha && npm run lint",
     "lint": "eslint bin/capturejs lib/ test/"
   },
   "dependencies": {
@@ -40,6 +42,8 @@
   "devDependencies": {
     "async": "^0.9.0",
     "eslint": "^0.10.1",
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.1",
     "nodeunit": "^0.9.0"
   },
   "engines": {
