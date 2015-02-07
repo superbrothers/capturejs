@@ -12,9 +12,9 @@ var PORT = 9999,
     ROOT_URI = "http://" + require("os").hostname() + ":" + PORT,
     server, request;
 
-function md5sum(path, callback) {
+function md5sum(filePath, callback) {
     var md5 = crypto.createHash("md5");
-    fs.readFile(path, function (err, data) {
+    fs.readFile(filePath, function (err, data) {
         if (err) {
             return callback(null, err);
         }
