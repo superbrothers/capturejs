@@ -31,6 +31,7 @@ Options:
   -A, --user-agent <value>         UserAgent
   -J, --javascript-file <value>    Inject external script code on Web page
   -V, --viewportsize <value>       ViewPortSize {width}x{height}
+  -C, --cliprect <value>           ClipRect {top}x{left}x{width}x{height} that will be rendered
   -c, --cookies-file <value>       Cookies file
   -T, --timeout <value>            HTTP Timeout (ms)
   -R, --renderdelay <value>        Render delay (ms)
