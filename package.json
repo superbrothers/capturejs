@@ -1,6 +1,6 @@
 {
   "name": "capturejs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Full webpage capture command-line tool with PhantomJS and NodeJS",
   "keywords": [
     "phantomjs",
