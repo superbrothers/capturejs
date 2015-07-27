@@ -62,7 +62,15 @@ Quick Start
 document.querySelector('.header img').style.visibility = 'hidden';
 ```
 
-![phantomjs org_hide_logo](screenshots/phantomjs_org_hide_logo.png)
+![phantomjs org_hide_logo](screenshots/phantomjs_org_red.png)
+
+    % capturejs --uri http://phantomjs.org/ \
+                --selector '.header' \
+                --viewportsize 1400x1400 \
+                --javascript-file ./hidelogo.js \                
+                --inject-script 'document.querySelector(".header").style.background = 'red';'
+                --output 'phantomjs_org_red.png'
+
 
 Copyright
 ---------
