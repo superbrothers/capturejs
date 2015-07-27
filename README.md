@@ -62,7 +62,7 @@ Quick Start
 document.querySelector('.header img').style.visibility = 'hidden';
 ```
 
-![phantomjs org_hide_logo](screenshots/phantomjs_org_red.png)
+![phantomjs org_hide_logo](screenshots/phantomjs_org_hide_logo.png)
 
     % capturejs --uri http://phantomjs.org/ \
                 --selector '.header' \
@@ -71,6 +71,7 @@ document.querySelector('.header img').style.visibility = 'hidden';
                 --inject-script 'document.querySelector(".header").style.background = 'red';'
                 --output 'phantomjs_org_red.png'
 
+![phantomjs org_red](screenshots/phantomjs_org_red.png)
 
 Copyright
 ---------
