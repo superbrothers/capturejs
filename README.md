@@ -11,7 +11,7 @@ CaptureJS is full webpage capture command-line tool with PhantomJS.
 Installation
 ------------
 
-First [install PhantomJS](http://phantomjs.org/download.html).
+First [install PhantomJS](http://phantomjs.org/download.html) less than 2.0.
 
 
     $ npm install -g capturejs
