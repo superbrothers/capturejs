@@ -35,6 +35,7 @@ Options:
   -c, --cookies-file <value>       Cookies file
   -T, --timeout <value>            HTTP Timeout (ms)
   -R, --renderdelay <value>        Render delay (ms)
+  -W, --waitcapturedelay <value>   Capture delay (ms)
   -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
 
   -v, --version                    Show version number and exit
