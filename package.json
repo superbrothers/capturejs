@@ -10,10 +10,7 @@
   "bugs": {
     "url": "https://github.com/superbrothers/capturejs/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/superbrothers/capturejs/blob/master/LICENSE.txt"
-  },
+  "license": "MIT",
   "author": "Kazuki Suda <kazuki.suda@gmail.com>",
   "files": [
     "bin",
