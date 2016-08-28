@@ -30,7 +30,8 @@ Options:
   -W, --web-security               Enables web security and forbids cross-domain XHR (default is true) (true|false|yes|no)
   -s, --selector <value>           CSS selector
   -A, --user-agent <value>         UserAgent
-  -J, --javascript-file <value>    Inject external script code on Web page
+  -J, --javascript-file <value>    Inject external script code from the specified file into the page
+  -j, --inject-script              Inject in-line custom scripts into the page
   -V, --viewportsize <value>       ViewPortSize {width}x{height}
   -C, --cliprect <value>           ClipRect {top}x{left}x{width}x{height} that will be rendered
   -c, --cookies-file <value>       Cookies file
@@ -70,7 +71,7 @@ document.querySelector('.header img').style.visibility = 'hidden';
                 --selector '.header' \
                 --viewportsize 1400x1400 \
                 --javascript-file ./hidelogo.js \                
-                --inject-script 'document.querySelector(".header").style.background = 'red';'
+                --inject-script 'document.querySelector(".header").style.background = "red";' \
                 --output 'phantomjs_org_red.png'
 
 ![phantomjs org_red](screenshots/phantomjs_org_red.png)
