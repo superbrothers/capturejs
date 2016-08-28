@@ -27,6 +27,7 @@ Options:
   -o, --output <value>             Output image file (required)
   -p, --ssl-protocol <value>       Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
   -I, --ignore-ssl-errors          Ignores SSL errors (expired/self-signed certificate errors)
+  -W, --web-security               Enables web security and forbids cross-domain XHR (default is true) (true|false|yes|no)
   -s, --selector <value>           CSS selector
   -A, --user-agent <value>         UserAgent
   -J, --javascript-file <value>    Inject external script code on Web page
@@ -35,7 +36,7 @@ Options:
   -c, --cookies-file <value>       Cookies file
   -T, --timeout <value>            HTTP Timeout (ms)
   -R, --renderdelay <value>        Render delay (ms)
-  -W, --waitcapturedelay <value>   Capture delay (ms)
+  -w, --waitcapturedelay <value>   Capture delay (ms)
   -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
 
   -v, --version                    Show version number and exit

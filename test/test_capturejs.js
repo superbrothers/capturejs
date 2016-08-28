@@ -59,7 +59,8 @@ module.exports = {
             actual = actualPath(Date.now() + ".gif");
         capturejs.capture({
             "uri": ROOT_URI,
-            "output": actual
+            "output": actual,
+            "web-security": "no" // Enable cross-domain XHR for unit tests to run locally.
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
@@ -76,6 +77,7 @@ module.exports = {
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "selector": "#test"
         }, function () {
             setTimeout(function () {
@@ -93,6 +95,7 @@ module.exports = {
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "javascript-file": path.join(__dirname, "external_script")
         }, function () {
             setTimeout(function () {
@@ -109,6 +112,7 @@ module.exports = {
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actualPath(Date.now() + ".gif"),
+            "web-security": "no",
             "user-agent": useragent
         }, function () {
             test.equal(useragent, request.headers["user-agent"]);
@@ -122,6 +126,7 @@ module.exports = {
             capturejs.capture({
                 "uri": ROOT_URI,
                 "output": actualPath(Date.now() + ".gif"),
+                "web-security": "no",
                 "cookies-file": cookiesFile
             }, function () {
                 // fs.exists is undefined on node v0.4, v0.6
@@ -136,6 +141,7 @@ module.exports = {
         capturejs.capture({
             "uri": ROOT_URI + "/?responsetime=2000",
             "output": actualPath(Date.now() + ".gif"),
+            "web-security": "no",
             "timeout": 500
         }, function (err) {
             test.ok(!!err);
@@ -148,6 +154,7 @@ module.exports = {
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "viewportsize": "20x20"
         }, function () {
             setTimeout(function () {
