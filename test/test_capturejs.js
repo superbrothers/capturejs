@@ -55,8 +55,10 @@ module.exports = {
         server.close(callback);
     },
     "basic": function (test) {
-        var expected = expectedPath("basic.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        // PhantomJS does not support GIF format without a special codec.
+        // See http://stackoverflow.com/questions/38048746/how-to-use-phantomjs-create-gif.
+        var expected = expectedPath("basic.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
@@ -72,8 +74,8 @@ module.exports = {
         });
     },
     "selector": function (test) {
-        var expected = expectedPath("selector.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("selector.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
@@ -90,8 +92,8 @@ module.exports = {
         });
     },
     "external script": function (test) {
-        var expected = expectedPath("external_script.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("external_script.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
@@ -108,24 +110,23 @@ module.exports = {
         });
     },
     "user-agent": function (test) {
-        var useragent = "This is user-agent test";
+        var useragent = "This is the user-agent test.";
         capturejs.capture({
             "uri": ROOT_URI,
-            "output": actualPath(Date.now() + ".gif"),
+            "output": actualPath(Date.now() + ".png"),
             "web-security": "no",
             "user-agent": useragent
         }, function () {
             test.equal(useragent, request.headers["user-agent"]);
             test.done();
         });
-    }
-    /*
+    },
     "cookies-file": function (test) {
         var cookiesFile = path.join(__dirname, "cookies-file.txt");
         fs.unlink(cookiesFile, function (err) {
             capturejs.capture({
                 "uri": ROOT_URI,
-                "output": actualPath(Date.now() + ".gif"),
+                "output": actualPath(Date.now() + ".png"),
                 "web-security": "no",
                 "cookies-file": cookiesFile
             }, function () {
@@ -140,7 +141,7 @@ module.exports = {
     "timeout": function (test) {
         capturejs.capture({
             "uri": ROOT_URI + "/?responsetime=2000",
-            "output": actualPath(Date.now() + ".gif"),
+            "output": actualPath(Date.now() + ".png"),
             "web-security": "no",
             "timeout": 500
         }, function (err) {
@@ -149,8 +150,8 @@ module.exports = {
         });
     },
     "viewportsize": function (test) {
-        var expected = expectedPath("viewportsize.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("viewportsize.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
@@ -165,6 +166,6 @@ module.exports = {
             }, 200);
         });
     }
-    */
 };
+
 // vim: set fenc=utf-8 ts=4 sts=4 sw=4 :
