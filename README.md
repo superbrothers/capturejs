@@ -68,8 +68,8 @@ document.querySelector('.header img').style.visibility = 'hidden';
     % capturejs --uri http://phantomjs.org/ \
                 --selector '.header' \
                 --viewportsize 1400x1400 \
-                --javascript-file ./hidelogo.js \                
-                --inject-script 'document.querySelector(".header").style.background = 'red';'
+                --javascript-file ./hidelogo.js \
+                --inject-script 'document.querySelector(".header").style.background = 'red';' \
                 --output 'phantomjs_org_red.png'
 
 ![phantomjs org_red](screenshots/phantomjs_org_red.png)
