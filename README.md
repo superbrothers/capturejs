@@ -11,8 +11,7 @@ CaptureJS is full webpage capture command-line tool with PhantomJS.
 Installation
 ------------
 
-First [install PhantomJS](http://phantomjs.org/download.html) less than 2.0.
-
+First [install PhantomJS](http://phantomjs.org/download.html).
 
     $ npm install -g capturejs
 
@@ -27,15 +26,17 @@ Options:
   -o, --output <value>             Output image file (required)
   -p, --ssl-protocol <value>       Sets the SSL protocol for secure connections (default is SSLv3) (sslv3|sslv2|tlsv1|any)
   -I, --ignore-ssl-errors          Ignores SSL errors (expired/self-signed certificate errors)
+  -W, --web-security               Enables web security and forbids cross-domain XHR (default is true) (true|false|yes|no)
   -s, --selector <value>           CSS selector
   -A, --user-agent <value>         UserAgent
-  -J, --javascript-file <value>    Inject external script code on Web page
+  -J, --javascript-file <value>    Inject external script code from the specified file into the page
+  -j, --inject-script              Inject in-line custom scripts into the page
   -V, --viewportsize <value>       ViewPortSize {width}x{height}
   -C, --cliprect <value>           ClipRect {top}x{left}x{width}x{height} that will be rendered
   -c, --cookies-file <value>       Cookies file
   -T, --timeout <value>            HTTP Timeout (ms)
   -R, --renderdelay <value>        Render delay (ms)
-  -W, --waitcapturedelay <value>   Capture delay (ms)
+  -w, --waitcapturedelay <value>   Capture delay (ms)
   -z, --zoomfactor <value>         Zoom Factor (default is 1.0, i.e. 100% zoom)
 
   -v, --version                    Show version number and exit

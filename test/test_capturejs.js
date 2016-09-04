@@ -55,11 +55,14 @@ module.exports = {
         server.close(callback);
     },
     "basic": function (test) {
-        var expected = expectedPath("basic.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        // PhantomJS does not support GIF format without a special codec.
+        // See http://stackoverflow.com/questions/38048746/how-to-use-phantomjs-create-gif.
+        var expected = expectedPath("basic.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
-            "output": actual
+            "output": actual,
+            "web-security": "no" // Enable cross-domain XHR for unit tests to run locally.
         }, function () {
             setTimeout(function () {
                 async.map([expected, actual], md5sum, function (err, results) {
@@ -71,11 +74,12 @@ module.exports = {
         });
     },
     "selector": function (test) {
-        var expected = expectedPath("selector.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("selector.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "selector": "#test"
         }, function () {
             setTimeout(function () {
@@ -88,11 +92,12 @@ module.exports = {
         });
     },
     "external script": function (test) {
-        var expected = expectedPath("external_script.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("external_script.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "javascript-file": path.join(__dirname, "external_script")
         }, function () {
             setTimeout(function () {
@@ -105,23 +110,24 @@ module.exports = {
         });
     },
     "user-agent": function (test) {
-        var useragent = "This is user-agent test";
+        var useragent = "This is the user-agent test.";
         capturejs.capture({
             "uri": ROOT_URI,
-            "output": actualPath(Date.now() + ".gif"),
+            "output": actualPath(Date.now() + ".png"),
+            "web-security": "no",
             "user-agent": useragent
         }, function () {
             test.equal(useragent, request.headers["user-agent"]);
             test.done();
         });
-    }
-    /*
+    },
     "cookies-file": function (test) {
         var cookiesFile = path.join(__dirname, "cookies-file.txt");
         fs.unlink(cookiesFile, function (err) {
             capturejs.capture({
                 "uri": ROOT_URI,
-                "output": actualPath(Date.now() + ".gif"),
+                "output": actualPath(Date.now() + ".png"),
+                "web-security": "no",
                 "cookies-file": cookiesFile
             }, function () {
                 // fs.exists is undefined on node v0.4, v0.6
@@ -135,7 +141,8 @@ module.exports = {
     "timeout": function (test) {
         capturejs.capture({
             "uri": ROOT_URI + "/?responsetime=2000",
-            "output": actualPath(Date.now() + ".gif"),
+            "output": actualPath(Date.now() + ".png"),
+            "web-security": "no",
             "timeout": 500
         }, function (err) {
             test.ok(!!err);
@@ -143,11 +150,12 @@ module.exports = {
         });
     },
     "viewportsize": function (test) {
-        var expected = expectedPath("viewportsize.gif"),
-            actual = actualPath(Date.now() + ".gif");
+        var expected = expectedPath("viewportsize.png"),
+            actual = actualPath(Date.now() + ".png");
         capturejs.capture({
             "uri": ROOT_URI,
             "output": actual,
+            "web-security": "no",
             "viewportsize": "20x20"
         }, function () {
             setTimeout(function () {
@@ -158,6 +166,6 @@ module.exports = {
             }, 200);
         });
     }
-    */
 };
+
 // vim: set fenc=utf-8 ts=4 sts=4 sw=4 :
